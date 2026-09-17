@@ -43,12 +43,15 @@
     "release.alpha": "pnpm run release -- --prerelease alpha"
   },
   "dependencies": {
-    "@isdk/match-ex": "workspace:^",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "ajv-keywords": "^5.1.0"
   },
+  "peerDependencies": {
+    "@isdk/match-ex": "workspace:^"
+  },
   "devDependencies": {
+    "@isdk/match-ex": "workspace:^",
     "@isdk/match-ex-template": "workspace:^",
     "@types/node": "^25.1.0",
     "prettier": "^3.9.7",
