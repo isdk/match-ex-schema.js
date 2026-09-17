@@ -1,5 +1,8 @@
 # @isdk/match-ex-schema
 
+> 【[English](./README.md)|中文】
+---
+
 基于 [Ajv](https://ajv.js.org/) 的 JSON Schema 插件，服务于 [`@isdk/match-ex`](https://github.com/isdk/match-ex.js)。
 
 导入本包即把 `AjvSchemaType` 注册为引擎的 JSON Schema 实现，JSON Schema 期望开箱即用。

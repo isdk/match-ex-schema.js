@@ -1,5 +1,8 @@
 # @isdk/match-ex-schema
 
+> 【English|[中文](./README.cn.md)】
+---
+
 Ajv-backed JSON Schema plugin for [`@isdk/match-ex`](https://github.com/isdk/match-ex.js).
 
 Importing this package registers `AjvSchemaType` as the engine's JSON Schema implementation, so JSON Schema expectations validate out of the box.
