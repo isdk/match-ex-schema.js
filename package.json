@@ -1,6 +1,6 @@
 {
   "name": "@isdk/match-ex-schema",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Riceball LEE <snowyu.lee@gmail.com>",
   "description": "Ajv-backed JSON Schema plugin for @isdk/match-ex. Importing it registers AjvSchemaType as the engine's schema implementation, so JSON Schema expectations validate out of the box.",
   "keywords": [
