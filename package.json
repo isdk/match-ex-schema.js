@@ -1,0 +1,63 @@
+{
+  "name": "@isdk/match-ex-schema",
+  "version": "0.1.0",
+  "author": "Riceball LEE <snowyu.lee@gmail.com>",
+  "description": "Ajv-backed JSON Schema plugin for @isdk/match-ex. Importing it registers AjvSchemaType as the engine's schema implementation, so JSON Schema expectations validate out of the box.",
+  "keywords": [
+    "match-ex",
+    "json-schema",
+    "ajv",
+    "validate",
+    "plugin",
+    "isdk"
+  ],
+  "homepage": "https://github.com/isdk/match-ex-schema.js",
+  "repository": "https://github.com/isdk/match-ex-schema.js",
+  "bugs": "https://github.com/isdk/match-ex-schema.js/issues",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build-fast": "tsup",
+    "build": "pnpm run build-fast --dts-resolve --dts",
+    "clean": "rm -fr dist",
+    "format": "pnpm run format:base -c",
+    "format:base": "prettier \"src/**/*.{ts,tsx,js,jsx,md}\"",
+    "format:fix": "pnpm run format:base --write",
+    "lint": "eslint .",
+    "style": "pnpm run format:base -c && pnpm run lint",
+    "style:fix": "pnpm run format:fix && npm run lint --fix",
+    "test": "vitest run",
+    "release": "pnpm run clean && pnpm run build && pnpm dlx commit-and-tag-version -s",
+    "release.alpha": "pnpm run release -- --prerelease alpha"
+  },
+  "dependencies": {
+    "@isdk/match-ex": "workspace:^",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "ajv-keywords": "^5.1.0"
+  },
+  "devDependencies": {
+    "@isdk/match-ex-template": "workspace:^",
+    "@types/node": "^25.1.0",
+    "prettier": "^3.8.1",
+    "terser": "^5.46.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.7.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.5",
+    "vitest": "^4.0.18"
+  }
+}
